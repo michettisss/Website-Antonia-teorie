@@ -579,3 +579,31 @@ button {
 .sezione {
     background-color: white;
 }
+
+/* COLORI E FONT - VERSIONE DESKTOP E MOBILE */
+
+html {
+    color-scheme: light;
+}
+
+body {
+    background: #fdf6f9 !important;
+    font-family: Arial, sans-serif !important;
+}
+
+.sezione {
+    background: #ffffff !important;
+}
+
+button {
+    background-color: #f3c6dc;
+    color: #444444 !important;
+    font-family: Arial, sans-serif !important;
+}
+
+/* Mantiene il colore rosa anche su smartphone */
+@media (max-width: 768px) {
+    html, body {
+        background: #fdf6f9 !important;
+    }
+}
