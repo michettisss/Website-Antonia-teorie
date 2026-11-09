@@ -1,3 +1,29 @@
+#Telefono
+@media (max-width: 600px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+}
+#Finetelefono
+
 body {
   font-family: Arial, sans-serif;
   background: #fdf6f9;
