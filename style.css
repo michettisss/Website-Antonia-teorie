@@ -609,3 +609,40 @@ button {
         background-color: #f0d0df !important;
     }
 }
+
+
+/* SOCIAL LINKS */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.social-links a {
+    color: #d47b9f;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+    color: #a94f76;
+    text-decoration: underline;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 14px;
+    }
+
+    .social-links a {
+        font-size: 14px;
+    }
+}
