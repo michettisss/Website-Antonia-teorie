@@ -553,3 +553,29 @@ img {
     font-size: 13px;
   }
 }
+
+/* =================================
+   CORREZIONI VISUALIZZAZIONE MOBILE
+   ================================= */
+
+html {
+    color-scheme: light;
+}
+
+body {
+    background-color: #fdf6f9 !important;
+    font-family: Arial, sans-serif;
+}
+
+/* Mantiene il font coerente nei pulsanti */
+button {
+    font-family: inherit;
+    color: #333333;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Mantiene il colore originale delle sezioni */
+.sezione {
+    background-color: white;
+}
