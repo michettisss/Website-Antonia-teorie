@@ -601,12 +601,7 @@ button {
     font-family: Arial, sans-serif !important;
 }
 
-/* Mantiene il colore rosa anche su smartphone */
-@media (max-width: 768px) {
-    html, body {
-        background: #fdf6f9 !important;
-    }
-}
+
 
 /* SFONDO LEGGERMENTE PIÙ ROSA SOLO SU TELEFONO */
 @media screen and (max-width: 768px) {
