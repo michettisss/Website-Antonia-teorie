@@ -1,0 +1,323 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fdf6f9;
+  text-align: center;
+}
+
+.allineato-sinistra {
+  text-align: left;
+}
+
+nav {
+  margin: 30px;
+}
+
+button {
+  background: #f3c6dc;
+  border: none;
+  padding: 12px 20px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #e4a9c7;
+}
+
+.sezione {
+  display: none;
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+#home {
+  max-width: 600px; /* La Home rimarrà più compatta e centrata */
+}
+
+.sezione.attiva, .sezione-trasparente.attiva {
+  display: block;
+}
+
+section img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+ul, ol {
+  margin: 10px 0 20px 20px;
+}
+
+h2{
+  color:#ff85a2;
+  font-style: italic
+}
+
+blockquote {
+  background: #fff0f3;
+  border-left: 5px solid #ff85a2;
+  margin: 20px 0;
+  padding: 15px;
+  font-style: italic;
+  border-radius: 0 10px 10px 0;
+}
+
+/* Tabella dei Codici (Nutella, ecc.) */
+
+.codici-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.codici-table th, .codici-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.codici-table th {
+  background-color: #ffe3ec;
+  color: #ff5c8d;
+}
+
+@media (max-width: 480px) {
+  .codici-table {
+    font-size: 14px;
+  }
+  .sezione {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+.galleria-home {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Crea colonne automatiche */
+  gap: 15px;            /* Spazio tra le foto */
+  margin-top: 30px;
+  padding: 10px;
+}
+
+/* Singolo blocco foto + testo */
+.foto-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease; /* Effetto zoom quando passi sopra */
+}
+
+.foto-item:hover {
+  transform: scale(1.05); /* La foto si ingrandisce leggermente */
+}
+
+.foto-item img {
+  width: 100%;
+  height: 150px;       /* Altezza fissa per uniformità */
+  object-fit: cover;   /* Taglia la foto senza deformarla */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.foto-item span {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #ff85a2;
+  font-weight: bold;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.indice-contenitore {
+  background-color: #fffafb; /* Rosa chiarissimo */
+  border: 2px solid #f3c6dc;   /* Bordo rosa più scuro */
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0 30px 0;
+  display: block;      
+  text-align: sticky;           /* Allinea il testo a sinistra */
+  box-shadow: 4px 4px 0px #f3c6dc;
+  top: 10px;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+
+
+/* Lista del Sommario */
+.indice-contenitore ul {
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+}
+
+.indice-contenitore li {
+  margin: 10px 0;
+}
+
+/* Link del Sommario */
+.indice-contenitore a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+/* Effetto al passaggio del mouse */
+.indice-contenitore a:hover {
+  color: #ff5c8d;
+  padding-left: 10px; /* Piccolo movimento verso destra */
+}
+
+/* Aggiunge una freccina o un emoji prima del link al passaggio del mouse */
+.indice-contenitore a:hover::before {
+  content: "👉🏻  ";
+}
+
+.layout-poster {
+  display: flex;          /* Allinea poster e colonna foto */
+  gap: 10px;              /* Spazio tra il poster e le foto */
+  align-items: stretch;   /* Fa sì che le colonne abbiano la stessa altezza */
+  margin: 20px 0;
+  max-width: auto;
+}
+
+.colonna-poster {
+  flex: 2;                /* Il poster occupa più spazio (proporzione 2) */
+}
+
+.img-poster {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  display: block;
+  object-fit: contain;      /* Il poster rimane intero e riempie lo spazio */
+  border-radius: 15px;
+  background-color: #f0f0f0;
+}
+
+.colonna-foto-piccole {
+  flex: 1;          /* La colonna delle foto è più stretta (proporzione 1) */
+  display: flex;
+  flex-direction: column; /* Mette le foto una sotto l'altra */
+  gap: 10px;              /* Spazio tra le 3 foto verticali */
+}
+
+.colonna-foto-piccole img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  flex: 1;
+  min-height: 0;
+  object-fit: cover;
+  border-radius: 10px; }
+
+
+@media (max-width: 600px) {
+  .layout-poster {
+    flex-direction: column;
+  }
+  .colonna-foto-piccole {
+    flex-direction: row; /* Sul cell le 3 foto piccole tornano affiancate */
+  }
+  .colonna-foto-piccole img {
+    height: 100px;
+  }
+}
+
+.overlay-full {
+  display: none;             /* Parte nascosto */
+  position: fixed;           /* Sta sopra tutto, anche se scorri */
+  z-index: 9999;             /* Il livello più alto possibile */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.98); /* Bianco quasi totale */
+  overflow-y: auto;          /* Permette di scorrere se il testo è lungo */
+  animation: fadeIn 0.4s;    /* Effetto comparsa */
+}
+
+/* Animazione comparsa */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Contenitore interno */
+.overlay-content {
+  position: relative;
+  width: 80%;
+  max-width: 800px;          /* Non farlo diventare troppo largo su PC */
+  margin: 100px auto;        /* Spazio dall'alto e centrato */
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* La X di chiusura */
+.close-overlay {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  font-size: 60px;
+  font-weight: bold;
+  color: #ff5c8d;
+  cursor: pointer;
+  z-index: 10000;
+  transition: 0.3s;
+}
+
+.close-overlay:hover {
+  transform: scale(1.2) rotate(90deg); /* Si ingrandisce e ruota al passaggio */
+  color: #d14470;
+}
+
+/* Testo dentro il popup */
+.testo-gossip {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  padding: 20px;
+}
+
+.sezione-trasparente {
+  display: none; 
+}
+
+/* Stile speciale: niente rettangolo bianco o bordi */
+.container-poster-libero {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  background: transparent; /* Forza lo sfondo trasparente */
+  border: none;            /* Rimuove bordi rosa */
+  box-shadow: none;        /* Rimuove l'ombra */
+}
+
+.galleria-trigger {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.galleria-trigger img {
+  width: 300px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.galleria-trigger img:hover {
+  transform: scale(1.05);
+}
