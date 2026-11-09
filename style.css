@@ -606,6 +606,6 @@ button {
 /* SFONDO LEGGERMENTE PIÙ ROSA SOLO SU TELEFONO */
 @media screen and (max-width: 768px) {
     body {
-        background-color: #f9eaf1 !important;
+        background-color: #f0d0df !important;
     }
 }
