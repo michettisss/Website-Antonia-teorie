@@ -607,3 +607,10 @@ button {
         background: #fdf6f9 !important;
     }
 }
+
+/* SFONDO LEGGERMENTE PIÙ ROSA SOLO SU TELEFONO */
+@media screen and (max-width: 768px) {
+    body {
+        background-color: #f9eaf1 !important;
+    }
+}
